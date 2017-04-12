@@ -18,7 +18,7 @@ syms s_w d_w l_CW r_w theta
 % CW     = sym('CW',[2,Nwheels]); 
 CW= [l_CW  l_CW -l_CW -l_CW;
      l_CW -l_CW -l_CW l_CW];
-% Nwheels = size(CW,2);
+Nwheels = size(CW,2);
 
 
 delta     = sym('delta',[1,Nwheels]); % delta is known.
