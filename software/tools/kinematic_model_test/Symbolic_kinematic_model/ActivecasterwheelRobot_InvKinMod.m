@@ -57,7 +57,7 @@ for i=1:Nwheels
     ddelta(i) = ( V_wh(2,i)-V_wh(1,i) ) / d_w - wR_R;
     
     % Compute wheel's angular velocity
-    W_wh(:,i) =  V_wh(:,i)/r;           
+    W_wh(:,i) =  V_wh(:,i)/r_w;           
 
                 
                 
