@@ -1,0 +1,15 @@
+10:10:51 **** Incremental Build of configuration Debug for project rosbag_video ****
+make all 
+Building file: ../src/bag_to_video.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/ros/kinetic/include -I/home/ropod/ropod-project/software/tools/WorldModels/wire/wire_msgs/msg_gen/cpp/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bag_to_video.d" -MT"src/bag_to_video.d" -o "src/bag_to_video.o" "../src/bag_to_video.cpp"
+In file included from /home/ropod/ropod-project/software/tools/WorldModels/wire/wire_msgs/msg_gen/cpp/include/wire_msgs/ObjectEvidence.h:17:0,
+                 from /home/ropod/ropod-project/software/tools/WorldModels/wire/wire_msgs/msg_gen/cpp/include/wire_msgs/WorldEvidence.h:18,
+                 from ../src/bag_to_video.cpp:25:
+/home/ropod/ropod-project/software/tools/WorldModels/wire/wire_msgs/msg_gen/cpp/include/wire_msgs/Property.h:17:25: fatal error: problib/PDF.h: No such file or directory
+compilation terminated.
+make: *** [src/bag_to_video.o] Error 1
+src/subdir.mk:24: recipe for target 'src/bag_to_video.o' failed
+
+10:10:51 Build Finished (took 751ms)
+

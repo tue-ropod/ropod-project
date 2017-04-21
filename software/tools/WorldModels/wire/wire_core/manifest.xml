@@ -1,0 +1,26 @@
+<package>
+  <description brief="wire_core">
+
+     wire_core
+
+  </description>
+  <author>Sjoerd van den Dries, Jos Elfring</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/wire_core</url>
+  <depend package="roscpp"/>
+  <depend package="tf"/>
+  <depend package="wire_msgs"/>
+  <depend package="pluginlib"/>
+  <depend package="problib"/>
+  <depend package="std_srvs" />
+
+  <rosdep name="tinyxml" />
+
+  <export>
+    <cpp cflags="`pkg-config --cflags tinyxml` -I${prefix}/include" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lwire `pkg-config --libs tinyxml`"/>
+  </export>
+    
+</package>
+
+

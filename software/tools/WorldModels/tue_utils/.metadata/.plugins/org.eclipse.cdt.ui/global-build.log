@@ -1,0 +1,151 @@
+13:08:30 **** Build of configuration Debug for project rosbag_video ****
+make all 
+Building file: ../src/bag_to_video.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/ros/kinetic/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bag_to_video.d" -MT"src/bag_to_video.o" -o "src/bag_to_video.o" "../src/bag_to_video.cpp"
+../src/bag_to_video.cpp:13:16: fatal error: cv.h: No such file or directory
+compilation terminated.
+make: *** [src/bag_to_video.o] Error 1
+src/subdir.mk:24: recipe for target 'src/bag_to_video.o' failed
+13:30:08 **** Incremental Build of configuration Debug for project rosbag_video ****
+make all 
+Building file: ../src/bag_to_video.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/ros/kinetic/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bag_to_video.d" -MT"src/bag_to_video.o" -o "src/bag_to_video.o" "../src/bag_to_video.cpp"
+../src/bag_to_video.cpp:23:37: fatal error: wire_msgs/WorldEvidence.h: No such file or directory
+compilation terminated.
+src/subdir.mk:24: recipe for target 'src/bag_to_video.o' failed
+make: *** [src/bag_to_video.o] Error 1
+13:30:57 **** Incremental Build of configuration Debug for project rosbag_video ****
+make all 
+Building file: ../src/bag_to_video.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/ros/kinetic/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bag_to_video.d" -MT"src/bag_to_video.o" -o "src/bag_to_video.o" "../src/bag_to_video.cpp"
+../src/bag_to_video.cpp:24:37: fatal error: wire_msgs/WorldEvidence.h: No such file or directory
+compilation terminated.
+src/subdir.mk:24: recipe for target 'src/bag_to_video.o' failed
+make: *** [src/bag_to_video.o] Error 1
+13:34:40 **** Incremental Build of configuration Debug for project rosbag_video ****
+make all 
+Building file: ../src/bag_to_video.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/ros/kinetic/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bag_to_video.d" -MT"src/bag_to_video.o" -o "src/bag_to_video.o" "../src/bag_to_video.cpp"
+../src/bag_to_video.cpp:23:67: fatal error: wire_msgs/msg_gen/cpp/include/wire_msgs/WorldEvidence.h: No such file or directory
+compilation terminated.
+src/subdir.mk:24: recipe for target 'src/bag_to_video.o' failed
+make: *** [src/bag_to_video.o] Error 1
+13:37:50 **** Incremental Build of configuration Debug for project rosbag_video ****
+make all 
+Building file: ../src/bag_to_video.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/ros/kinetic/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bag_to_video.d" -MT"src/bag_to_video.o" -o "src/bag_to_video.o" "../src/bag_to_video.cpp"
+../src/bag_to_video.cpp:23:37: fatal error: wire_msgs/WorldEvidence.h: No such file or directory
+compilation terminated.
+src/subdir.mk:24: recipe for target 'src/bag_to_video.o' failed
+make: *** [src/bag_to_video.o] Error 1
+14:57:57 **** Incremental Build of configuration Debug for project rosbag_video ****
+make all 
+Building file: ../src/bag_to_video.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/ros/kinetic/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bag_to_video.d" -MT"src/bag_to_video.d" -o "src/bag_to_video.o" "../src/bag_to_video.cpp"
+../src/bag_to_video.cpp:23:37: fatal error: wire_msgs/WorldEvidence.h: No such file or directory
+compilation terminated.
+src/subdir.mk:24: recipe for target 'src/bag_to_video.o' failed
+make: *** [src/bag_to_video.o] Error 1
+14:57:59 **** Incremental Build of configuration Debug for project rosbag_video ****
+make all 
+Building file: ../src/bag_to_video.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/ros/kinetic/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bag_to_video.d" -MT"src/bag_to_video.d" -o "src/bag_to_video.o" "../src/bag_to_video.cpp"
+../src/bag_to_video.cpp:23:37: fatal error: wire_msgs/WorldEvidence.h: No such file or directory
+compilation terminated.
+src/subdir.mk:24: recipe for target 'src/bag_to_video.o' failed
+make: *** [src/bag_to_video.o] Error 1
+14:58:56 **** Incremental Build of configuration Debug for project rosbag_video ****
+make all 
+Building file: ../src/bag_to_video.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/ros/kinetic/include -I/home/ropod/ropod-project/software/tools/WorldModels -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bag_to_video.d" -MT"src/bag_to_video.d" -o "src/bag_to_video.o" "../src/bag_to_video.cpp"
+../src/bag_to_video.cpp: In function ‘int main(int, char**)’:
+../src/bag_to_video.cpp:87:9: error: ‘wire_msgs’ has not been declared
+         wire_msgs::WorldEvidenceConstPtr evidence = m.instantiate<wire_msgs::WorldEvidence>();
+         ^
+../src/bag_to_video.cpp:179:13: error: ‘evidence’ was not declared in this scope
+         if (evidence) {
+             ^
+src/subdir.mk:24: recipe for target 'src/bag_to_video.o' failed
+make: *** [src/bag_to_video.o] Error 1
+15:00:03 **** Incremental Build of configuration Debug for project rosbag_video ****
+make all 
+Building file: ../src/bag_to_video.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/ros/kinetic/include -I/home/ropod/ropod-project/software/tools/WorldModels -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bag_to_video.d" -MT"src/bag_to_video.d" -o "src/bag_to_video.o" "../src/bag_to_video.cpp"
+../src/bag_to_video.cpp:23:12: warning: extra tokens at end of #include directive
+ #include <>wire_msgs/WorldEvidence.h>
+            ^
+../src/bag_to_video.cpp:23:10: error: empty filename in #include
+ #include <>wire_msgs/WorldEvidence.h>
+          ^
+../src/bag_to_video.cpp: In function ‘int main(int, char**)’:
+../src/bag_to_video.cpp:87:9: error: ‘wire_msgs’ has not been declared
+         wire_msgs::WorldEvidenceConstPtr evidence = m.instantiate<wire_msgs::WorldEvidence>();
+         ^
+../src/bag_to_video.cpp:179:13: error: ‘evidence’ was not declared in this scope
+         if (evidence) {
+             ^
+make: *** [src/bag_to_video.o] Error 1
+src/subdir.mk:24: recipe for target 'src/bag_to_video.o' failed
+15:00:13 **** Incremental Build of configuration Debug for project rosbag_video ****
+make all 
+Building file: ../src/bag_to_video.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/ros/kinetic/include -I/home/ropod/ropod-project/software/tools/WorldModels -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bag_to_video.d" -MT"src/bag_to_video.d" -o "src/bag_to_video.o" "../src/bag_to_video.cpp"
+../src/bag_to_video.cpp:23:37: fatal error: wire_msgs/WorldEvidence.h: No such file or directory
+compilation terminated.
+make: *** [src/bag_to_video.o] Error 1
+src/subdir.mk:24: recipe for target 'src/bag_to_video.o' failed
+15:08:02 **** Incremental Build of configuration Debug for project rosbag_video ****
+make all 
+Building file: ../src/bag_to_video.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/ros/kinetic/include -I/home/ropod/ropod-project/software/tools/WorldModels -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bag_to_video.d" -MT"src/bag_to_video.d" -o "src/bag_to_video.o" "../src/bag_to_video.cpp"
+../src/bag_to_video.cpp:25:37: fatal error: wire_msgs/WorldEvidence.h: No such file or directory
+compilation terminated.
+make: *** [src/bag_to_video.o] Error 1
+src/subdir.mk:24: recipe for target 'src/bag_to_video.o' failed
+15:10:15 **** Incremental Build of configuration Debug for project rosbag_video ****
+make all 
+Building file: ../src/bag_to_video.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/ros/kinetic/include -I/home/ropod/ropod-project/software/tools/WorldModels/wire/wire_msgs/msg_gen/cpp/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bag_to_video.d" -MT"src/bag_to_video.d" -o "src/bag_to_video.o" "../src/bag_to_video.cpp"
+In file included from /home/ropod/ropod-project/software/tools/WorldModels/wire/wire_msgs/msg_gen/cpp/include/wire_msgs/ObjectEvidence.h:17:0,
+                 from /home/ropod/ropod-project/software/tools/WorldModels/wire/wire_msgs/msg_gen/cpp/include/wire_msgs/WorldEvidence.h:18,
+                 from ../src/bag_to_video.cpp:25:
+/home/ropod/ropod-project/software/tools/WorldModels/wire/wire_msgs/msg_gen/cpp/include/wire_msgs/Property.h:17:25: fatal error: problib/PDF.h: No such file or directory
+compilation terminated.
+make: *** [src/bag_to_video.o] Error 1
+src/subdir.mk:24: recipe for target 'src/bag_to_video.o' failed
+15:41:22 **** Incremental Build of configuration Debug for project rosbag_video ****
+make all 
+Building file: ../src/bag_to_video.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/ros/kinetic/include -I/home/ropod/ropod-project/software/tools/WorldModels/wire/wire_msgs/msg_gen/cpp/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bag_to_video.d" -MT"src/bag_to_video.d" -o "src/bag_to_video.o" "../src/bag_to_video.cpp"
+In file included from /home/ropod/ropod-project/software/tools/WorldModels/wire/wire_msgs/msg_gen/cpp/include/wire_msgs/ObjectEvidence.h:17:0,
+                 from /home/ropod/ropod-project/software/tools/WorldModels/wire/wire_msgs/msg_gen/cpp/include/wire_msgs/WorldEvidence.h:18,
+                 from ../src/bag_to_video.cpp:25:
+/home/ropod/ropod-project/software/tools/WorldModels/wire/wire_msgs/msg_gen/cpp/include/wire_msgs/Property.h:17:25: fatal error: problib/PDF.h: No such file or directory
+compilation terminated.
+src/subdir.mk:24: recipe for target 'src/bag_to_video.o' failed
+make: *** [src/bag_to_video.o] Error 1
+10:10:51 **** Incremental Build of configuration Debug for project rosbag_video ****
+make all 
+Building file: ../src/bag_to_video.cpp
+Invoking: Cross G++ Compiler
+g++ -I/opt/ros/kinetic/include -I/home/ropod/ropod-project/software/tools/WorldModels/wire/wire_msgs/msg_gen/cpp/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bag_to_video.d" -MT"src/bag_to_video.d" -o "src/bag_to_video.o" "../src/bag_to_video.cpp"
+In file included from /home/ropod/ropod-project/software/tools/WorldModels/wire/wire_msgs/msg_gen/cpp/include/wire_msgs/ObjectEvidence.h:17:0,
+                 from /home/ropod/ropod-project/software/tools/WorldModels/wire/wire_msgs/msg_gen/cpp/include/wire_msgs/WorldEvidence.h:18,
+                 from ../src/bag_to_video.cpp:25:
+/home/ropod/ropod-project/software/tools/WorldModels/wire/wire_msgs/msg_gen/cpp/include/wire_msgs/Property.h:17:25: fatal error: problib/PDF.h: No such file or directory
+compilation terminated.
+make: *** [src/bag_to_video.o] Error 1
+src/subdir.mk:24: recipe for target 'src/bag_to_video.o' failed

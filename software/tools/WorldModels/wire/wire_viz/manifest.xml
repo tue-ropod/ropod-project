@@ -1,0 +1,19 @@
+<package>
+  <description brief="wire_viz">
+
+     Package that visualizes WIRE World Model input and output in RViz using visualization markers
+
+  </description>
+  <author>Jos Elfring, Sjoerd van den Dries</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/wire_viz</url>
+  <depend package="wire_msgs"/>
+  <depend package="geometry_msgs"/>
+  <depend package="visualization_msgs"/>
+  <depend package="problib"/>
+  <depend package="tf"/> 
+
+</package>
+
+

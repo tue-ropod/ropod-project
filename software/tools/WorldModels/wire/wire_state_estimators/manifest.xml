@@ -1,0 +1,20 @@
+<package>
+  <description brief="wire_state_estimators">
+
+     wire_state_estimators
+
+  </description>
+  <author>Sjoerd van den Dries</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/wire_state_estimators</url>
+  <depend package="wire_core"/>
+  <depend package="pluginlib"/>
+
+  <export>
+    <wire_core plugin="${prefix}/models_plugin.xml" />
+  </export>
+
+</package>
+
+

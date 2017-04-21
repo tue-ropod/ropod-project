@@ -1,0 +1,80 @@
+!SESSION 2017-04-20 11:51:17.479 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.ui 1 1 2017-04-20 11:51:45.772
+!MESSAGE Workbench migration started
+
+!ENTRY org.eclipse.ui 1 1 2017-04-20 11:51:47.079
+!MESSAGE Workbench migration finished
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-04-20 11:52:31.250
+!MESSAGE Indexed 'rosbag_video' (7 sources, 947 headers) in 14 sec: 46,889 declarations; 119,635 references; 37 unresolved inclusions; 0 syntax errors; 730 unresolved names (0.44%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-04-20 11:56:02.030
+!MESSAGE Indexed 'rosbag_video' (7 sources, 1,485 headers) in 18.7 sec: 94,797 declarations; 439,724 references; 8 unresolved inclusions; 0 syntax errors; 90 unresolved names (0.017%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-04-20 11:57:27.591
+!MESSAGE Indexed 'rosbag_video' (7 sources, 1,493 headers) in 14.5 sec: 95,625 declarations; 440,293 references; 2 unresolved inclusions; 0 syntax errors; 89 unresolved names (0.017%)
+
+!ENTRY org.eclipse.debug.core 4 125 2017-04-20 13:29:30.894
+!MESSAGE Error logged from Debug Core: 
+!STACK 1
+org.eclipse.debug.core.DebugException: Invalid launch configuration XML.
+	at org.eclipse.debug.internal.core.LaunchConfigurationInfo.getInvalidFormatDebugException(LaunchConfigurationInfo.java:704)
+	at org.eclipse.debug.internal.core.LaunchConfigurationInfo.initializeFromXML(LaunchConfigurationInfo.java:513)
+	at org.eclipse.debug.internal.core.LaunchManager.createInfoFromXML(LaunchManager.java:955)
+	at org.eclipse.debug.internal.core.LaunchManager.getInfo(LaunchManager.java:1371)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.getInfo(LaunchConfiguration.java:470)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.getType(LaunchConfiguration.java:640)
+	at org.eclipse.debug.internal.core.LaunchManager.isValid(LaunchManager.java:2101)
+	at org.eclipse.debug.internal.core.LaunchManager.verifyConfigurations(LaunchManager.java:2488)
+	at org.eclipse.debug.internal.core.LaunchManager.getAllLaunchConfigurations(LaunchManager.java:1147)
+	at org.eclipse.debug.internal.core.LaunchManager.getLaunchConfigurations(LaunchManager.java:1428)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.getApplicableLaunchConfigurations(LaunchConfigurationManager.java:780)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getParticipatingLaunchConfigurations(LaunchingResourceManager.java:507)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:324)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:244)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:142)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.debug.core 4 5012 2017-04-20 13:29:30.896
+!MESSAGE Invalid launch configuration XML.
+
+!ENTRY org.eclipse.debug.core 4 125 2017-04-20 13:29:30.908
+!MESSAGE Error logged from Debug Core: 
+!STACK 1
+org.eclipse.debug.core.DebugException: Invalid launch configuration XML.
+	at org.eclipse.debug.internal.core.LaunchConfigurationInfo.getInvalidFormatDebugException(LaunchConfigurationInfo.java:704)
+	at org.eclipse.debug.internal.core.LaunchConfigurationInfo.initializeFromXML(LaunchConfigurationInfo.java:513)
+	at org.eclipse.debug.internal.core.LaunchManager.createInfoFromXML(LaunchManager.java:955)
+	at org.eclipse.debug.internal.core.LaunchManager.getInfo(LaunchManager.java:1371)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.getInfo(LaunchConfiguration.java:470)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.getType(LaunchConfiguration.java:640)
+	at org.eclipse.debug.internal.core.LaunchManager.isValid(LaunchManager.java:2101)
+	at org.eclipse.debug.internal.core.LaunchManager.verifyConfigurations(LaunchManager.java:2488)
+	at org.eclipse.debug.internal.core.LaunchManager.getAllLaunchConfigurations(LaunchManager.java:1147)
+	at org.eclipse.debug.internal.core.LaunchManager.getLaunchConfigurations(LaunchManager.java:1428)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.getApplicableLaunchConfigurations(LaunchConfigurationManager.java:780)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getParticipatingLaunchConfigurations(LaunchingResourceManager.java:507)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:324)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:244)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:142)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.debug.core 4 5012 2017-04-20 13:29:30.908
+!MESSAGE Invalid launch configuration XML.
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-04-20 13:37:33.616
+!MESSAGE Indexed 'rosbag_video' (7 sources, 1,509 headers) in 13.6 sec: 99,281 declarations; 444,821 references; 2 unresolved inclusions; 0 syntax errors; 34 unresolved names (0.0062%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-04-20 13:38:21.570
+!MESSAGE Indexed 'rosbag_video' (7 sources, 1,509 headers) in 13.4 sec: 99,281 declarations; 444,821 references; 2 unresolved inclusions; 0 syntax errors; 34 unresolved names (0.0062%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-04-20 13:45:50.663
+!MESSAGE Indexed 'rosbag_video' (7 sources, 1,509 headers) in 14.8 sec: 99,281 declarations; 444,821 references; 2 unresolved inclusions; 0 syntax errors; 34 unresolved names (0.0062%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-04-20 14:00:17.621
+!MESSAGE Indexed 'rosbag_video' (7 sources, 1,509 headers) in 13.6 sec: 99,281 declarations; 444,821 references; 2 unresolved inclusions; 0 syntax errors; 34 unresolved names (0.0062%)

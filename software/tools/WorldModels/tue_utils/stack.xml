@@ -1,0 +1,8 @@
+<stack>
+  <description brief="tue_utils">
+  </description>
+  <author>Sjoerd van den Dries, Jos Elfring</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/tue_utils</url>
+</stack>

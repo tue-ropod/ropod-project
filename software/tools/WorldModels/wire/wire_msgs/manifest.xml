@@ -1,0 +1,15 @@
+<package>
+  <description brief="wire_msgs">
+
+     wire_msgs
+
+  </description>
+  <author>Sjoerd van den Dries</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/wire_msgs</url>
+  <depend package="problib"/>
+
+</package>
+
+
