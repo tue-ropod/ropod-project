@@ -1,0 +1,14 @@
+# File names for splitting a bag file into bag and video file
+split_bag_in: test.bag
+split_bag_out: test_out.bag
+split_video_out: video_out.avi
+
+# Rate of the image topic
+frame_rate: 30
+
+# File names for merging video and bag file into new bag file
+merge_bag_in: test_out.bag
+merge_video_in: video_out.avi
+merge_bag_out: exp.bag
+
+

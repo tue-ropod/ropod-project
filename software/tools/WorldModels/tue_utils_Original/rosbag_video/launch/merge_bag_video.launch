@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <node pkg="merge_split_bag" type="merge_video_bag" respawn="false" name="merge_video_bag" output="screen">     
+        <rosparam file="$(find merge_split_bag)/parameters/params.yaml" command="load" />
+    </node>
+
+</launch>
