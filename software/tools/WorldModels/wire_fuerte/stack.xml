@@ -1,0 +1,7 @@
+<stack>
+  <description brief="wire">WIRE</description>
+  <author>Maintained by Jos Elfring, Sjoerd van den Dries</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/wire</url>
+</stack>

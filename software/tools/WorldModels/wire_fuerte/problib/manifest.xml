@@ -1,0 +1,22 @@
+<package>
+  <description brief="problib">
+
+     problib
+
+  </description>
+  <author>Sjoerd van den Dries</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/problib</url>
+  <depend package="roscpp"/>
+  <depend package="armadillo_matrix"/> 
+    
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lproblib"/>
+  </export>
+
+  <depend package="common_rosdeps" />
+
+</package>
+
+

@@ -1,0 +1,17 @@
+<package>
+  <description brief="wire_tutorials">
+
+     wire_tutorials
+
+  </description>
+  <author>Jos Elfring</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/wire_tutorials</url>
+  <depend package="roscpp"/>
+  <depend package="wire_msgs"/>
+  <depend package="problib"/>
+
+</package>
+
+
