@@ -1,7 +1,7 @@
 function robot_visualization(x,y,z,z_wheels,time,PlotPath,Follow,MakeVideo)
 %% Explanation
 % VisualiseRobot(x,y,z,z_wheels,time,Ts,MakeVideo)
-% In order to visualise the robot, the enteries of the function need to be
+% In order to visualise the robot, the enteries of the functiofunction robot_visualization(x,y,z,z_wheels,time,PlotPath,Follow,MakeVideo)n need to be
 % defined as follows. The size of each variable, is either the same length
 % as "time" or has length 1.
 %
@@ -19,11 +19,17 @@ function robot_visualization(x,y,z,z_wheels,time,PlotPath,Follow,MakeVideo)
 % Optional options:
 % PlotPath  : enable (1) plots the path driven by the robot
 %             enable (2) plots the path of each individual wheel
+%             enable (3) plots the path of the wheels axis of the twinwheel
 % Follow    : enable (1) makes the axis follow the robot instead of a fixed axis
 % MakeVideo : enable (1) to make a video of the generated motion otherwise
 
 % Ugly fix!!!(by Cesar) to be according to the convention. Needs to be fix in the
 % ploting fucntion itself
+
+% Fixed the path plotting according to the conventions, Added an extra
+% PlotPath functions which plots the path of the twinwheel axis instead of
+% the path of the pivot.(by noud)
+
 z_wheels = z_wheels.' - pi/2;
 
 %% Error Messages
@@ -101,8 +107,12 @@ for i = 1:length(time)
         hold on
     elseif PlotPath == 2
         plot_PathWheels(x(1:i),y(1:i),z(1:i))
+        hold on
+    elseif PlotPath == 3
+        plot_PathWheels(x(1:i),y(1:i),z(1:i),z_wheels(1:4,1:i))
+        hold on
     end
-    plot_Robot(x(i),y(i),z(i),z_wheels(:,i))
+    plot_Robot(x(i),y(i),z(i),z_wheels(:,i))    
     if Follow >= 1
         axis([x(i)-1 x(i)+1 y(i)-1 y(i)+1])
         text(x(i)+0.85,y(i)+0.85,['Time = ',num2str(time(i)),'s'])
