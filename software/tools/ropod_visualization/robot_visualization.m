@@ -1,4 +1,4 @@
-function robot_visualization(x,y,z,z_wheels,time,PlotPath,Follow,MakeVideo)
+function robot_visualization(x,y,z,z_wheels,time,robotconf,PlotPath,Follow,MakeVideo)
 %% Explanation
 % VisualiseRobot(x,y,z,z_wheels,time,Ts,MakeVideo)
 % In order to visualise the robot, the enteries of the functiofunction robot_visualization(x,y,z,z_wheels,time,PlotPath,Follow,MakeVideo)n need to be
@@ -10,10 +10,13 @@ function robot_visualization(x,y,z,z_wheels,time,PlotPath,Follow,MakeVideo)
 % z :        Defines the rotation around the z direction
 % z_Wheels : Defines the rotation of each wheel.[4xi]
 % Orientation of the wheels:
-%  - Wheel 1 : Left Back
-%  - Wheel 2 : Left Front
-%  - Wheel 3 : Right Back
-%  - Wheel 4 : Right Front
+%      y^R
+%       ^
+% W4    |    W1
+%       |
+% <-----|----->x^R
+%       |
+% W3    |    W2
 % time:      time
 % 
 % Optional options:
@@ -35,14 +38,14 @@ z_wheels = z_wheels.' - pi/2;
 %% Error Messages
 warning('off')
 addpath('Functions')
-if nargin == 5
+if nargin == 6
     PlotPath = 0;
     Follow = 0;
     MakeVideo = 0;
-elseif nargin == 6
+elseif nargin == 7
     Follow = 0;
     MakeVideo = 0;
-elseif nargin == 7
+elseif nargin == 8
     MakeVideo = 0;
 end
 
@@ -106,13 +109,13 @@ for i = 1:length(time)
         plot(x(1:i),y(1:i),'.')
         hold on
     elseif PlotPath == 2
-        plot_PathWheels(x(1:i),y(1:i),z(1:i))
+        plot_PathWheels(x(1:i),y(1:i),z(1:i),robotconf)
         hold on
     elseif PlotPath == 3
-        plot_PathWheels(x(1:i),y(1:i),z(1:i),z_wheels(1:4,1:i))
+        plot_PathWheels(x(1:i),y(1:i),z(1:i),z_wheels(1:4,1:i),robotconf)
         hold on
     end
-    plot_Robot(x(i),y(i),z(i),z_wheels(:,i))    
+    plot_Robot(x(i),y(i),z(i),z_wheels(:,i),robotconf)    
     if Follow >= 1
         axis([x(i)-1 x(i)+1 y(i)-1 y(i)+1])
         text(x(i)+0.85,y(i)+0.85,['Time = ',num2str(time(i)),'s'])

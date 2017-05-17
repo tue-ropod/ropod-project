@@ -1,10 +1,10 @@
-function plot_Wheels(x,y,z)
+function plot_Wheels(x,y,z,robotconf)
 %% Constants 
-d = 0.005;           % Thickness of the axis between the wheels
-rw = 0.055;          % Radius of the wheel
-b_wheel = 0.02;      % Thickness of the wheel
-dw = 0.08;           % distance between wheels centers
-sw = 0.08;           % distance to rotational point in y plane
+d = robotconf.d;                % Thickness of the axis between the wheels
+rw = robotconf.rw;              % Radius of the wheel
+b_wheel = robotconf.b_wheel;    % Thickness of the wheel
+dw = robotconf.dw;              % distance between wheels centers
+sw = robotconf.sw;              % distance to rotational point in y plane
 %% Rotation Matrix
 R_Matrix = [cos(z) -sin(z);sin(z) cos(z)];
 %% Right Wheel
