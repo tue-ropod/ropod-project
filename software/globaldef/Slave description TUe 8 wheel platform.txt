@@ -1,0 +1,127 @@
+Slave description document rev.2
+
+Slave name     : TU/e 8 wheel platform
+Vendor ID      : 0x00000500
+Product code   : 0x01601005
+
+The EtherCAT slave module communicates with 8 motor controllers via RS422 at 400Kbaud.
+Two motor controllers are in one smart wheel unit. Each wheel unit has it's own serial port.
+The update frequency of setpoint and status values between slave controller and motor controller is 200Hz.
+Velocity controller update rate is 1KHz.
+Current controller update rate is 10KHz.
+
+The pivot BISS sensor is connected to the odd motor controller, 1, 3, 5 and 7.
+
+The current firmware does not allow to read or write the motor parameters via EtherCAT. Next versions will add this capability. 
+
+M1..M8 denotes motor 1 to motor 8
+G1..G8 denotes gyro and accelleration data for motor unit 1 to 8
+
+Mx Status bitmap
+
+Bit   Description
+0     Motor enabled
+1     unused
+2     Voltage below 18V, disables motor
+3     Voltage above 32V, disables motor
+4     Mosfet temperature over 85C, disables motor
+5     Save to eeprom finished
+6     Motor phasing in progress
+7     BISS absolute sensor in calibration mode
+
+Mx Command bitmap
+
+Bit   Description
+0     Motor enable request
+1     unused
+2     internal only (request motor actual values in response)
+3     internal only (request accell and gyro values in response)
+4     unused
+5     Parameter save to EEPROM request (positive edge triggered)
+6     BISS sensor calibration mode request (positive edge triggered)
+7     Motor phasing calibration request (positive edge triggered)  
+
+Input structure
+
+Index Sub   Datatype    Name              Description
+6000  01    uint8       State             Cyclic counter, increments with every internal slave cycle
+
+6010  01    uint8       M1 Update         Cyclic counter, increments after each packet exchange with motor controller
+6010  02    uint8       M1 Status         Bitmap, see Mx status
+6010  03    int16       M1 Current        Motor phase current in 0.01A units
+6010  04    int16       M1 Velocity       Motor speed in 0.01 Rad/s units
+6010  05    uint16      M1 Position       Absolute motor position in 1/65536 rev units, 1 revolution is 16bit
+6010  06    uint16      M1 Voltage        Bus voltage in 0.01V units
+6010  07    uint16      M1 Variable 1     Absolute pivot position in 1/16536 rev units, 1 revolution is 16bit
+6010  08    uint16      M1 Variable 2     unused
+
+.... repeat for M2 to M8 ....
+
+6011  01    uint8       G1 Update         Cyclic counter, increments after each packet exchange
+6011  02    int8        G1 Temperature    Temperature of gyro sensor in 0.5C units
+6011  03    int16       G1 Accell x       Acceleration in local x axis 1/512 G units
+6011  04    int16       G1 Accell y       Acceleration in local y axis 1/512 G units
+6011  05    int16       G1 Accell z       Acceleration in local z axis 1/512 G units
+6011  06    int16       G1 Gyro x         Gyro velocity in local x axis 1/2000 deg/sec units
+6011  06    int16       G1 Gyro y         Gyro velocity in local y axis 1/2000 deg/sec units
+6011  06    int16       G1 Gyro z         Gyro velocity in local z axis 1/2000 deg/sec units
+
+.... repeat for G2 to G8 ....
+
+Output structure
+
+Index Sub   Datatype    Name              Description
+7000  01    uint8       Command           Unused
+
+7010  01    uint8       M1 Drivemode      0x00 = Velocity control, 0x01 = current only control
+7010  02    uint8       M1 Command        Bitmap, see Mx command
+7010  03    int16       M1 Velocity SP    Velocity setpoint in 0.01 Rad/s units
+7010  04    int16       M1 Current SP     Current limit setpoint in 0.01A units
+
+.... repeat for M2 to M8 ....
+
+
+Motor parameter list (currently unsupported via EtherCAT)
+
+#     Name              Datatype       Description
+0     Paramcount        uint16         Number of parameters (excluding this)
+1     HW                uint8          Hardware version (0x02)
+2     SW                uint32         Software version (0x00002002) 
+3     ID                uint32         identity (0x00002003)
+4     Drivemode         uint8          Drive mode (0x04 = BLAC with BISS absolute encoder)
+5     PWMfrequency      uint16         PWM frequency (20000)
+6     Encoderres        uint16         Resolution of encoder in counts per revolution (0xffff)
+7     Encoderphase      int16          Electric encoder position for alignment of magnetic and electric field
+8     Encoderdir        int8           +1 or -1 to reverse encoder versus electric field direction (-1)
+9     Motorpoles        uint8          Number of motor pole pairs (10)         
+10    Motorresistance   float32        Phase to phase resistance in ohms (0.1)
+11    MotorKV           float32        Motor EMF constant in V*s/Rad
+12    Currentresistor   float32        Resistance in ohm for the current shunt (0.001)
+13    Currentlimit      float32        Maximum control current in amp (25.0)
+14    Velocitylimit     float32        Maximum control velocity in Rad/s (314.0)
+15    Undervoltage      float32        Bus undervoltage cutout in V (18.0)
+16    Overvoltage       float32        Bus overvoltage cutout in V (32.0)
+17    Overtemp          float32        Maxiumum mosfet temperature cutout in C (80.0) (currently unused)
+18    Commtimout        uint8          Communication watchdog timeout in ms (200)
+19    TauVelocity       float32        Filter time constant in s for velocity (0.004)
+20    Current P         float32        P gain for current PI controller (0.8)
+21    Current I         float32        I gain for current PI controller (0.08) (integral limiter equals current setpoint)
+22    Velocity P        float32        P gain for velocity PI controller (1.0)
+23    Velocity I        float32        I gain for velocity PI controller (0.1)
+24    Velocity I limit  float32        I limiter for velocity PI controller (40.0)
+25    Yawdrift          float32        Drift compensation for gyro Z axis (currently unused)
+26    TauGyro           float32        Filter time constant in s for gyro axes (0.004)
+27    MotMasterAmpl     float32        Motor BISS sensor master track error amplitude (at 2x pole frequency)
+28    MotMasterPhase    float32        Motor BISS sensor master track error phase
+29    MotNoniusAmpl     float32        Motor BISS sensor nonius track error amplitude (at 2x pole frequency)
+30    MotNoniusPhase    float32        Motor BISS sensor nonius track error phase
+31    PivMasterAmpl     float32        Pivot BISS sensor master track error amplitude (at 2x pole frequency)
+32    PivMasterPhase    float32        Pivot BISS sensor master track error phase
+33    PivNoniusAmpl     float32        Pivot BISS sensor nonius track error amplitude (at 2x pole frequency)
+34    PivNoniusPhase    float32        Pivot BISS sensor nonius track error phase
+35    Pivotoffset       uint16         Offset for pivot to have zero 
+
+Wheel diameter is approximately 105mm
+Torque constant is approximately 0.28 Nm/A
+Maximum advised motor current is 25A
+Maximum continuous power is 150W
