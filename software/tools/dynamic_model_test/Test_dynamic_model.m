@@ -49,9 +49,10 @@ robotconf.b_wheel = 0.02;      % Thickness of the wheel
 robotconf.dw = wheel_physical_parameters.separation.value;          % distance between wheels centers
 robotconf.sw = wheel_physical_parameters.caster_offset.value;       % distance to rotational point in y plane
 
-q_est_d = downsample(q_est,15);
-delta_abs_est_d = downsample(delta_abs_est,15);
-Time_d = downsample(Time,15);
+dsfactor = 10;
+q_est_d = downsample(q_est,dsfactor);
+delta_abs_est_d = downsample(delta_abs_est,dsfactor);
+Time_d = downsample(Time,dsfactor);
 robot_visualization(q_est_d(:,1),q_est_d(:,2),q_est_d(:,3),...
     delta_abs_est_d,Time_d,robotconf,3,0,0);
 
